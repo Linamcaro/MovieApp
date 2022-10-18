@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         //setting up navigation bar
         val bottomNavigation = binding.bottomNavigation
         val navHostFragment =
@@ -26,13 +27,18 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigation.setupWithNavController(navController)
 
+
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.homeFragment || destination.id == R.id.favoritesFragment) {
 
-                bottomNavigation.visibility = View.VISIBLE
-            } else {
+            when(destination.id){
 
-                bottomNavigation.visibility = View.GONE
+                R.id.homeFragment -> bottomNavigation.visibility = View.VISIBLE
+
+                R.id.favoritesFragment -> bottomNavigation.visibility = View.VISIBLE
+
+                R.id.detailFragment -> supportActionBar?.show()
+
+                else -> bottomNavigation.visibility = View.GONE
             }
         }
     }

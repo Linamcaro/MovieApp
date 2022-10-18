@@ -19,6 +19,11 @@
         <entry key="..\:/Estudio/Cursos/Udacity/Developing Android apps with Kotlin/proyectos de clase/MovieApp/app/src/main/res/layout/tv_show_layout_adapter.xml" value="0.1" />
         <entry key="..\:/Estudio/Cursos/Udacity/Developing Android apps with Kotlin/proyectos de clase/MovieApp/app/src/main/res/menu/navigation_tab_bar.xml" value="0.25" />
         <entry key="..\:/Estudio/Cursos/Udacity/Developing Android apps with Kotlin/proyectos de clase/MovieApp/app/src/main/res/menu/navigation_tab_menu.xml" value="0.10052083333333334" />
+        <entry key="..\:/Estudio/proyectos/MovieApp/MovieApp/app/src/main/res/drawable/ic_favorite.xml" value="0.1415" />
+        <entry key="..\:/Estudio/proyectos/MovieApp/MovieApp/app/src/main/res/layout/fragment_detail.xml" value="0.25" />
+        <entry key="..\:/Estudio/proyectos/MovieApp/MovieApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Estudio/proyectos/MovieApp/MovieApp/app/src/main/res/layout/fragment_login.xml" value="0.16822916666666668" />
+        <entry key="..\:/Estudio/proyectos/MovieApp/MovieApp/app/src/main/res/layout/movie_item_list.xml" value="0.22708333333333333" />
       </map>
     </option>
   </component>

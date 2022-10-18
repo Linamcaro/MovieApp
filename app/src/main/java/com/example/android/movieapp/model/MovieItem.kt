@@ -1,8 +1,14 @@
 package com.example.android.movieapp.model
 
-data class MovieItem(
-    val id: Int,
-    val image: Image,
-    val name: String,
 
-)
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
+data class MovieItem(
+    @SerializedName("id")
+    val id: Int,
+    @SerializedName("image")
+    val image: Image,
+    @SerializedName("name")
+    val name: String,
+):Serializable

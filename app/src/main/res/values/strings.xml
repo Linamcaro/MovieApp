@@ -20,5 +20,7 @@
     <string name="invalid_login">Username and password are incorrect</string>
     <string name="missing_info">All fields need to be filled</string>
     <string name="registration_successful">Registration successful</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

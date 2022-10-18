@@ -9,14 +9,16 @@ import coil.load
 import com.example.android.movieapp.databinding.MovieItemListBinding
 import com.example.android.movieapp.model.MovieItem
 
-class MovieListAdapter
+class MovieListAdapter(private val onMovieClicked: (MovieItem) -> Unit)
     : RecyclerView.Adapter<MovieListAdapter.ViewHolder>() {
 
     override fun getItemCount() = data.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentMovie = data[position]
+        holder.itemView.setOnClickListener{onMovieClicked(currentMovie)}
         holder.bind(currentMovie)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

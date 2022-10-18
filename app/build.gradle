@@ -35,8 +35,7 @@ android {
 
     // Enables data binding.
     buildFeatures {
-        dataBinding = true
-    }
+        dataBinding = true}
 }
 
 dependencies {

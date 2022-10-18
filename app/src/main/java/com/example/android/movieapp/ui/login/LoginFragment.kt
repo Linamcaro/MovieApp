@@ -44,10 +44,9 @@ class LoginFragment : Fragment() {
                 val name = binding.usernameEditText.text.toString()
                 val password = binding.passwordEditText.text.toString()
 
-                hideKeyboard()
-
                 loginViewModel.validation(name, password)
             }
+            hideKeyboard()
         }
 
         //sign up button clicked
