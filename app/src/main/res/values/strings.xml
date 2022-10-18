@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="Movie_title">Movies</string>
+
+    <string name="favorites_fragment">Here you can see your list of favorites movies</string>
+
+    <!-- Hints labels for editText-->
+    <string name="name_hint">Username</string>
+    <string name="password_hint">Password</string>
+
+    <!-- Button labels -->
+    <string name="sign_in_button">Sign In</string>
+    <string name="sign_up_button">Sign Up</string>
+
+    <!-- Nav Bar labels -->
+    <string name="home_menu">Home</string>
+    <string name="favorites_menu">Favorites</string>
+
+    <!-- SnackBar labels -->
+    <string name="invalid_login">Username and password are incorrect</string>
+    <string name="missing_info">All fields need to be filled</string>
+    <string name="registration_successful">Registration successful</string>
+
+</resources>
