@@ -10,7 +10,7 @@ Dagger-Hilt
 
 ## Preview
 
-<img src="/Gif/Movie-app-preview.gif" width="250" height="450"/>
 
+<img src="/Gif/Movie-app-preview.gif" width="250" height="450"/>
 
 
