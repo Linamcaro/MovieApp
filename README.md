@@ -7,15 +7,15 @@ An App that consumes a TV show API and returns a list of TV shows, built using F
 
 this app was created using:
 
-TV show API 
-Room
-MVVM
-LiveData 
-Dagger-Hilt
-Navigation component
-Coroutines
-DataBinding
-Coil
+- TV show API 
+- Room
+- MVVM
+- LiveData 
+- Dagger-Hilt
+- Navigation component
+- Coroutines
+- DataBinding
+- Coil
 
 
 
