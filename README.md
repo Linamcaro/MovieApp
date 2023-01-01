@@ -3,7 +3,7 @@
 An App that consumes a TV show API and returns a list of TV shows, built using Fragments and Kotlin, Google's recommended language to build native Android apps. The app allows users to easily browse and discover new TV shows to watch.
 
 
-#Libraries and Technology used
+# Libraries and Technology used
 
 this app was created using:
 
