@@ -76,7 +76,7 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:$daggerhilt_version"
     kapt "androidx.hilt:hilt-compiler:$hilt_version"
 
-    //Glide
+    //Coil
     implementation "io.coil-kt:coil:$coil_version"
 
     //Testing

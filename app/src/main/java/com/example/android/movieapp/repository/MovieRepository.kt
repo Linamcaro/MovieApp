@@ -7,5 +7,5 @@ class MovieRepository
 @Inject
 constructor(private val apiService: ApiService){
 
-    suspend fun getMovies() = apiService.getMovies()
+    suspend fun getMovies(page: Int, limit: Int) = apiService.getMovies(page, limit)
 }

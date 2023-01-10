@@ -7,10 +7,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.android.movieapp.R
 import com.example.android.movieapp.databinding.FragmentHomeBinding
 import com.example.android.movieapp.model.MovieItem
-import com.example.android.movieapp.ui.login.LoginFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -31,15 +32,31 @@ class HomeFragment: Fragment() {
         homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
         binding.homeViewModel = homeViewModel
 
+        val recyclerView = binding.movieList
         binding.lifecycleOwner = this
+        val layoutManager = recyclerView.layoutManager as GridLayoutManager
 
-        //adapter
+        //binding the adapter
         val adapter = MovieListAdapter(){onMovieClick(it)}
-        binding.movieList.adapter = adapter
+        recyclerView.adapter = adapter
 
         homeViewModel.responseMovie.observe(viewLifecycleOwner) { movieList ->
             adapter.data = movieList
         }
+
+
+        //check if the last item shown in the RecyclerView is the 5th last item
+        recyclerView.addOnScrollListener(object: RecyclerView.OnScrollListener(){
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val lastVisibleMovieItem = layoutManager.findLastVisibleItemPosition()
+                val totalMovieItemCount = layoutManager.itemCount
+                //check if the last item shown in the RecyclerView is the 5th last item
+                if(lastVisibleMovieItem >= totalMovieItemCount - 5){
+                    //if true then load the next page of data
+                    homeViewModel.changePage()
+                }
+            }
+        })
 
 
         return binding.root

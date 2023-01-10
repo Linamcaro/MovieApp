@@ -11,4 +11,6 @@ data class MovieItem(
     val image: Image,
     @SerializedName("name")
     val name: String,
+    @SerializedName("summary")
+    val summary: String
 ):Serializable

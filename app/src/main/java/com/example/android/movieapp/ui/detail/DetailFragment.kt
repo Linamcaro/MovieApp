@@ -10,7 +10,9 @@ import androidx.navigation.fragment.navArgs
 import coil.load
 import com.example.android.movieapp.R
 import com.example.android.movieapp.databinding.FragmentDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetailFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
@@ -26,10 +28,12 @@ class DetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_detail, container, false)
 
+
         //getting the bundle
         val movie = args.movie
 
         binding.title.text = movie.name
+        binding.summary.text = movie.summary
         binding.cover.load(movie.image.original) {
             crossfade(true)
             crossfade(1000)

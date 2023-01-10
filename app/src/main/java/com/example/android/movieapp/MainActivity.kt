@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.android.movieapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -35,8 +37,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.homeFragment -> bottomNavigation.visibility = View.VISIBLE
 
                 R.id.favoritesFragment -> bottomNavigation.visibility = View.VISIBLE
-
-                R.id.detailFragment -> supportActionBar?.show()
 
                 else -> bottomNavigation.visibility = View.GONE
             }
