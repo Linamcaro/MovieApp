@@ -7,9 +7,9 @@
     <!-- Login & Sign up Colors-->
     <color name="button_color">#FF6200EE</color>
 
+
     <!-- nav bar colors-->
     <color name = "nav_bar_background">#202730</color>
-
 
 
     <color name="purple_200">#FFBB86FC</color>

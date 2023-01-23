@@ -16,15 +16,17 @@ class HomeViewModel
 @Inject
 constructor(private val repository: MovieRepository) : ViewModel() {
 
-    private val currentPage = MutableLiveData<Int>().apply { value = 1 }
+    private val currentPage = MutableLiveData<Int>().apply { value = 0 }
     //indicates whether the function is currently loading the next page or not.
-    private var isLoading = false
+    private var isLoading = true
 
     private val itemsPerPage = 20
 
     private val _response = MutableLiveData<List<MovieItem>>()
     val responseMovie : LiveData<List<MovieItem>>
         get() = _response
+
+    private val pages = mutableListOf<List<MovieItem>>()
 
     init{
         getMoviesList()
@@ -49,18 +51,18 @@ constructor(private val repository: MovieRepository) : ViewModel() {
         //check if is loading to prevent changePage() and getMoviesList() from being called multiple times.
         if (!isLoading) {
             isLoading = true
-            currentPage.value = currentPage.value?.plus(1)
-            getMoviesList()
+                currentPage.value = currentPage.value?.plus(1)
+                getMoviesList()
         }
     }
 
 
-   /* fun previousPage() {
-        if (!isLoading) {
-            if (currentPage.value != 1) {
-                currentPage.value = currentPage.value?.minus(1)
-                _response.postValue(pages[currentPage.value!! - 1])
-            }
-        }
+  /* fun previousPage() {
+
+       if (!isLoading) {
+           isLoading = true
+           currentPage.value = currentPage.value?.minus(1)
+           getMoviesList()
+       }
     }*/
 }

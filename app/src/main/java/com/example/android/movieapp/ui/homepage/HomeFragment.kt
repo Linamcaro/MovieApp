@@ -50,6 +50,13 @@ class HomeFragment: Fragment() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 val lastVisibleMovieItem = layoutManager.findLastVisibleItemPosition()
                 val totalMovieItemCount = layoutManager.itemCount
+
+
+                /*if(dy < 0){
+                        homeViewModel.previousPage()
+
+                }*/
+
                 //check if the last item shown in the RecyclerView is the 5th last item
                 if(lastVisibleMovieItem >= totalMovieItemCount - 5){
                     //if true then load the next page of data

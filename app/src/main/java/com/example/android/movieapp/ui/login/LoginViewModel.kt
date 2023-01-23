@@ -22,7 +22,7 @@ constructor(private val repository: UserCredentialsRepository) : ViewModel() {
     val loginData: LiveData<UserCredentials?>
         get() = _loginData
 
-    //Check if user logged in
+    //Check if user is logged in
     private val _loggedIn = MutableLiveData<Boolean>()
     val loggedIn: LiveData<Boolean>
         get() = _loggedIn
@@ -41,6 +41,7 @@ constructor(private val repository: UserCredentialsRepository) : ViewModel() {
     init {
         _onSignIn.value = false
         _onSignUp.value = false
+        _loggedIn.value = false
     }
 
     //get info from database
@@ -67,12 +68,9 @@ constructor(private val repository: UserCredentialsRepository) : ViewModel() {
         _onSignUp.value = true
     }
 
-    //check if is logged in
-    fun isNotLoggedIn() {
-        _loggedIn.postValue(false)
-    }
-
     fun isLoggedIn() {
         _loggedIn.postValue(true)
     }
+
+
 }

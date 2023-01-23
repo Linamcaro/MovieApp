@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.android.movieapp.R
 import com.example.android.movieapp.database.UserCredentials
 import com.example.android.movieapp.databinding.FragmentRegisterBinding
-import com.example.android.movieapp.hideKeyboard
+import com.example.android.movieapp.utils.hideKeyboard
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 

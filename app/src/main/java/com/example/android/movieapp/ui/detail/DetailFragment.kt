@@ -28,7 +28,6 @@ class DetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_detail, container, false)
 
-
         //getting the bundle
         val movie = args.movie
 
@@ -38,6 +37,10 @@ class DetailFragment : Fragment() {
             crossfade(true)
             crossfade(1000)
         }
+
+
+
+
 
         // Inflate the layout for this fragment
         return binding.root

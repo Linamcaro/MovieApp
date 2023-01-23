@@ -1,4 +1,4 @@
-package com.example.android.movieapp
+package com.example.android.movieapp.utils
 
 import android.app.Activity
 import android.content.Context
@@ -18,3 +18,4 @@ fun Context.hideKeyboard(view: View) {
     val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
     inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
 }
+

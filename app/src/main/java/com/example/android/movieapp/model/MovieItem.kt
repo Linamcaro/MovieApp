@@ -14,3 +14,5 @@ data class MovieItem(
     @SerializedName("summary")
     val summary: String
 ):Serializable
+
+

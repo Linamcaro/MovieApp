@@ -76,7 +76,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:background="@drawable/button_rounded"
+            android:background="@drawable/button_rounded2"
             android:text="@string/sign_in_button"
             android:onClick="@{() -> registerViewModel.onLoginClick()}"
             app:layout_constraintEnd_toEndOf="@+id/signup_button"

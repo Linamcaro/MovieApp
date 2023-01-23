@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.android.movieapp.databinding.FragmentLoginBinding
-import com.example.android.movieapp.hideKeyboard
+import com.example.android.movieapp.utils.hideKeyboard
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -38,14 +38,22 @@ class LoginFragment : Fragment() {
 
         binding.lifecycleOwner = this
 
+        loginViewModel.loggedIn.observe(viewLifecycleOwner){
+            if(it){
+                this.findNavController()
+                    .navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
+            }
+        }
+
         //sign in button clicked
         loginViewModel.onSignIn.observe(viewLifecycleOwner) {
+
             if (it == true) {
                 val name = binding.usernameEditText.text.toString()
                 val password = binding.passwordEditText.text.toString()
-
                 loginViewModel.validation(name, password)
             }
+
             hideKeyboard()
         }
 
@@ -70,8 +78,6 @@ class LoginFragment : Fragment() {
                     getString(com.example.android.movieapp.R.string.invalid_login),
                     Snackbar.LENGTH_SHORT
                 ).show()
-
-                loginViewModel.isNotLoggedIn()
             }
         })
 
